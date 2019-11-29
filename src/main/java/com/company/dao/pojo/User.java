@@ -1,30 +1,39 @@
 package com.company.dao.pojo;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class User implements Serializable {
-    private int id;
+public class User {
+    private Integer id;
+
     private String username;
+
     private BigDecimal sal;
+
     private Date birthday;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", sal=" + sal +
-                ", birthday=" + birthday +
-                '}';
+    public User(Integer id, String username, BigDecimal sal, Date birthday) {
+        this.id = id;
+        this.username = username;
+        this.sal = sal;
+        this.birthday = birthday;
     }
 
-    public int getId() {
+    public User(String username, BigDecimal sal, Date birthday) {
+        this.username = username;
+        this.sal = sal;
+        this.birthday = birthday;
+    }
+
+    public User() {
+        super();
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -33,7 +42,7 @@ public class User implements Serializable {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username = username == null ? null : username.trim();
     }
 
     public BigDecimal getSal() {
@@ -52,19 +61,13 @@ public class User implements Serializable {
         this.birthday = birthday;
     }
 
-    public User(String username, BigDecimal sal, Date birthday) {
-        this.username = username;
-        this.sal = sal;
-        this.birthday = birthday;
-    }
-
-    public User(int id, String username, BigDecimal sal, Date birthday) {
-        this.id = id;
-        this.username = username;
-        this.sal = sal;
-        this.birthday = birthday;
-    }
-
-    public User() {
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", sal=" + sal +
+                ", birthday=" + birthday +
+                '}';
     }
 }

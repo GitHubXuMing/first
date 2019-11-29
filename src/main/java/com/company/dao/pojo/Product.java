@@ -12,6 +12,22 @@ public class Product {
 
     private Date pdate;
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "pid=" + pid +
+                ", pname='" + pname + '\'' +
+                ", price=" + price +
+                ", pdate=" + pdate +
+                '}';
+    }
+
+    public Product(String pname, BigDecimal price, Date pdate) {
+        this.pname = pname;
+        this.price = price;
+        this.pdate = pdate;
+    }
+
     public Product(Integer pid, String pname, BigDecimal price, Date pdate) {
         this.pid = pid;
         this.pname = pname;

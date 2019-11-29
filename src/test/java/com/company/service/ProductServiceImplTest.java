@@ -1,4 +1,4 @@
-package com.company.dao;
+package com.company.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,11 +9,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
-public class UserDaoTest {
+public class ProductServiceImplTest {
     @Autowired
-    UserDao userDao;
+    ProductService productService;
+
     @Test
     public void findAll() {
-        userDao.findAll().forEach(System.out::println);
+        productService.findAll().forEach(System.err::println);
     }
 }

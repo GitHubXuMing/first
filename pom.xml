@@ -13,15 +13,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <junit.version>4.12</junit.version>
     <!-- spring版本号 -->
     <spring.version>4.3.18.RELEASE</spring.version>
-    <!-- junit版本号 -->
-    <junit.version>4.12</junit.version>
-    <!-- mybatis版本号 -->
+    <!-- mybatis版本 -->
     <mybatis.version>3.3.0</mybatis.version>
-    <!-- mybatis-spring整合jar包的版本号 -->
     <mybatis.spring.version>1.2.0</mybatis.spring.version>
-    <!--mysql驱动版本号-->
     <mysql.version>5.1.38</mysql.version>
     <jackson.version>2.9.7</jackson.version>
   </properties>
